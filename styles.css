@@ -21,8 +21,16 @@ main{
     /* padding: 0 16px; */
     margin: 0 16px;
 }
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* header */
+.nav-options{
+    display: none;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -56,6 +64,7 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     /* justify-items: center; */
+    padding-bottom: 40px;
 }
 .banner-text{
     color: white;
@@ -64,7 +73,8 @@ main{
 .banner-heading{
     font-size: 36px;
     font-weight: bold;
-    width: 278px;
+    /* width: 278px; */
+    width: 100%;
 }
 .banner-button{
     height: 44px;
@@ -79,13 +89,20 @@ main{
     font-size: 16px;
     font-weight: 500;
     margin-right: 8px;
+    color: white;
 }
 .fa-arrow-right{
     font-size: 24px;
+    color: white;
+}
+.banner-image{
+    display: flex;
+    justify-content: center;
 }
 .banner-image img{
-    width: 329px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
+    /* margin: 0 auto; */
 }
 
 /* players */
@@ -114,4 +131,172 @@ main{
 .player-description{
     font-size: 16px;
     line-height: 26px;
+}
+
+/* news */
+.news{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.news-heading{
+    font-size: 30px;
+    line-height: 40px;
+}
+.news-subheading{
+    font-size: 16px;
+    line-height: 28px;
+}
+.news-image img{
+    width: 100%;
+    height: 248px;
+    margin-top: 29px;
+}
+
+/* footer */
+
+.footer-logo{
+    width: 278px;
+    margin-top: 43px;
+}
+.social-icon{
+    display: flex;
+    margin-top: 40px;
+}
+.social-icon-individual{
+    text-decoration: none;
+    height: 32px;
+    width: 32px;
+    background-color: rgb(231, 231, 232);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+}
+.social-icon-individual a{
+    text-decoration: none;
+    color: rgb(150, 155, 171);
+}
+.copyright{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 0;
+}
+
+/* Designing for tabs */
+@media only screen and (min-width: 600px) {
+    .nav-options{
+        display: none;
+    }
+    .banner{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+        margin: 0 15px;
+    }
+    .player{
+        width: 100%;
+    }
+    .player-photo img{
+        width: 100%;
+    }
+    .news{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+    .news-image img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+}
+
+/* Designing for Desktop and Laptop */
+
+@media only screen and (min-width: 1068px) {
+    /* common utilities */
+    header{
+        padding: 42px 124px; 
+    }
+    /* header design */
+    .nav-options{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 60%;
+        justify-content: space-between;        
+    }
+    .nav-options a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+    .login-button{
+        height: 44px;
+        width: 123px;
+    }
+
+    /* banner design */
+    .banner{
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 0;
+    }
+    .banner-heading{
+        font-size: 64px;
+        width: 100%;
+    }
+    .banner-image img{
+        height: 438px;
+        width: 100%;
+    }
+
+    /* main design */
+    main{
+        margin: 70px 110px 0;
+    }
+    .players{
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+    }
+    .player{
+        width: 100%;
+        padding: 15px;
+    }
+    .player-photo img{
+        width: 100%;
+    }
+
+    /* news */
+    .news{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+    }
+    .news-text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .news-heading{
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+    }
+    .news-subheading{
+        color: rgba(108, 108, 108, 1);
+        font-weight: 400;
+    }
+    .news-image img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
 }
